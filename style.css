@@ -23,3 +23,9 @@
 #correctLabel {
     color: green;
 }
+
+.smaller-img{
+    max-height:80%;
+    max-width:80%;
+    width:auto
+}
