@@ -1,5 +1,5 @@
 .footer{
-    position:absolute;
+    position:relative;
     bottom:0;
     width:100%;
     height:60px;
@@ -14,4 +14,14 @@
 .fin-cards {
     display: flex;
     flex-wrap: wrap;
+}
+
+.vertical-center{
+    display:flex;
+    align-items:center
+}
+
+.btn-ocean{
+    background-color:#0067b8;
+
 }
