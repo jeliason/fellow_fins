@@ -6,3 +6,12 @@
     line-height:60px;
     background-color:#f5f5f5
 }
+
+.card {
+    margin: 5px;
+}
+
+.fin-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
