@@ -6,3 +6,10 @@
     line-height:60px;
     background-color:#f5f5f5
 }
+.vertical-center{
+    display:flex;
+    align-items:center
+}
+.btn-ocean{
+    background-color:#0067b8;
+}
