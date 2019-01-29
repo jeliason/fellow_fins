@@ -20,3 +20,8 @@
     background-color:#0067b8;
 
 }
+.smaller-img{
+    max-height:80%;
+    max-width:80%;
+    width:auto
+}
