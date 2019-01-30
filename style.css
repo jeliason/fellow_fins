@@ -29,7 +29,12 @@
     max-width:80%;
     width:auto
 }
+<<<<<<< HEAD
 
 .quiz-option:focus {
     color: green;
+=======
+.large-txt{
+    font-size:64px;
+>>>>>>> e3085b7a21401d9e73bc80d770382cff585e016b
 }
