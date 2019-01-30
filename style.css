@@ -7,11 +7,6 @@
     background-color:#f5f5f5
 }
 
-.fin-cards {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .vertical-center{
     display:flex;
     align-items:center
@@ -20,6 +15,15 @@
     background-color:#0067b8;
 
 }
+
+#incorrectLabel {
+    color: red;
+}
+
+#correctLabel {
+    color: green;
+}
+
 .smaller-img{
     max-height:80%;
     max-width:80%;
