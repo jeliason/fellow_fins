@@ -1,0 +1,1 @@
+//export const PEOPLE = require('../ff.json');
