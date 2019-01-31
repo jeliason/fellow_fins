@@ -10,8 +10,11 @@ export class QuizPageComponent{
   title = 'ff-app';
   people = PEOPLE;
 
-  selectRandomPerson (){
-    var randomPerson = Math.floor(Math.random() * 53);
-    console.log(randomPerson);
+  getFin (){
+    var correctFinCode = Math.floor(Math.random() * 53);
+    console.log(correctFinCode);
+
+    var correctFinName = PEOPLE[correctFinCode].Name;
+    var correctFinPic = PEOPLE[correctFinCode].Picture_Local;
   }
 }

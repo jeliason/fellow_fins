@@ -1,27 +1,24 @@
-<main role="main" class="container-fluid mt-4 mb-3 flex-fill">
-    <div class="row">
-        <button (click)='selectRandomPerson()'>Select Person</button>
+<div class="row">
 
-        <div class="col-lg-6 vertical-center d-flex justify-content-center" id="profile_face">
-            <img src="alex_rogers.png"  class="img-fluid">
-        </div>
-        
-        <div class="col-lg-6 vertical-center d-flex justify-content-center" id="multiple_choice">
-            <div class="btn-group-vertical mt-3">
-                <button type="button" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
-                        Alex Rogers
-                </button>
-                <button type="button" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
-                        Stephen Godderidge
-                </button>
-                <button type="button" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
-                        Jake Altabef
-                </button>
-                <button type="button" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
-                        Katie Lutz
-                </button>
-            </div>
-        </div>
-        
+    <div class="col-lg-6 vertical-center d-flex justify-content-center" id="profile_face">
+        <img src="./assets/fins_pics/{{person.Picture_Local}}"  class="img-fluid">
     </div>
-</main>
+    
+    <div class="col-lg-6 vertical-center d-flex justify-content-center" id="multiple_choice">
+        <div class="btn-group-vertical mt-3">
+            <button type="button" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    {{person.Name}}
+            </button>
+            <button type="button" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    {{person.Name}}
+            </button>
+            <button type="button" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    {{person.Name}}                
+            </button>
+            <button type="button" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
+                    {{person.Name}}            
+            </button>
+        </div>
+    </div>
+    
+</div>
