@@ -1,3 +1,1 @@
-export var people = [
-    
-]
+//export const PEOPLE = require('../ff.json');

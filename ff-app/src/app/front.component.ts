@@ -1,15 +1,12 @@
 import { Component,OnInit } from '@angular/core';
+import {PEOPLE} from './ff';
 
 @Component({
   selector: 'app-front',
   templateUrl: './front.component.html',
-  styleUrls: ['./style.css']
+  styleUrls: ['../styles.css']
 })
-export class FrontComponent implements OnInit{
+export class FrontComponent{
   title = 'ff-app';
-    constructor(){}
-    ngOnInit(){
-
-    }
-
+  people = PEOPLE;
 }
