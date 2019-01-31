@@ -1,4 +1,5 @@
 <div class="row">
+    <button (click)='selectRandomPerson()'>Select Person</button>
 
     <div class="col-lg-6 vertical-center d-flex justify-content-center" id="profile_face">
         <img src="./assets/fins_pics/{{person.Picture_Local}}"  class="img-fluid">
@@ -16,7 +17,7 @@
                     {{person.Name}}                
             </button>
             <button type="button" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    {{person.Name}}            
+                    {{person.Name}}                
             </button>
         </div>
     </div>

@@ -15,6 +15,9 @@ export class QuizPageComponent{
     console.log(correctFinCode);
 
     var correctFinName = PEOPLE[correctFinCode].Name;
+    console.log(correctFinName);
+
     var correctFinPic = PEOPLE[correctFinCode].Picture_Local;
+    console.log(correctFinName);
   }
 }

@@ -26,5 +26,15 @@ export class AppComponent{
   hideQuiz(){
     this.showFront=true;
   }
+<<<<<<< HEAD
   
+=======
+  getFin (){
+    var correctFinCode = Math.floor(Math.random() * 53);
+
+    var correctFinName = PEOPLE[correctFinCode].Name;
+
+    var correctFinPic = PEOPLE[correctFinCode].Picture_Local;
+  }
+>>>>>>> 162b7440de64f644560ae0f3439f2890c6cf45a6
 }
