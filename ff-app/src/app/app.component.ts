@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+import {PEOPLE} from './ff';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent{
   title = 'ff-app';
-  showFront=true;
+  people = PEOPLE;
 }
