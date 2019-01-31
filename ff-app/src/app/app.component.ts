@@ -24,6 +24,6 @@ export class AppComponent{
     this.showFront=false;
   }
   hideQuiz(){
-    
+    this.showFront=true;
   }
 }
