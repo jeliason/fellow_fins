@@ -67,7 +67,7 @@ export class AppComponent {
     } else {
       this.getFin();
     }
-    this.sleep(300);
+    this.sleep(0);
   }
   sleep(milliseconds) {
     var start = new Date().getTime();

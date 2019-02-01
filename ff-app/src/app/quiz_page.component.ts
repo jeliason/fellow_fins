@@ -18,11 +18,11 @@ export class QuizPageComponent{
   done(p: string){
     if (p == this.correctFinName){
       this.success.emit();
-      this.ocean=false;
+      //this.ocean=false;
     }
     else{
       this.failure.emit()
-      this.ocean=false;
+      //this.ocean=false;
       this.danger=true;
     }
   }
