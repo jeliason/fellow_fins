@@ -18,7 +18,7 @@
 <main role="main" class="container-fluid mt-4 mb-3">
 
     <div *ngIf="showFront" class="d-flex justify-content-center row m-1">
-        <div *ngFor="let person of people" class="card bg-light m-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <div *ngFor="let person of people" class="card shadow bg-light m-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
             <img class="card-img-top" style="width: 84%; margin-left: 8%; margin-top: 2%;" src="./assets/fins_pics/{{person.Picture_Local}}">
             <div class="card-body">
             <h2 class="card-title">{{person.Name}}</h2>
@@ -43,10 +43,10 @@
 </div>
 <div class="row"> 
             <div class="col-6 d-flex justify-content-center">
-                <button (click)="initQuiz()" class="btn btn-primary btn-ocean" type="submit">Try Again</button>
+                <button (click)="initQuiz()" class="btn btn-primary btn-ocean btn-quiz-end" type="submit">Try Again</button>
             </div>
             <div class="col-6 d-flex justify-content-center">
-                <button (click)="hideQuiz()" class="btn btn-primary btn-ocean" type="submit">Home</button>
+                <button (click)="hideQuiz()" class="btn btn-primary btn-ocean btn-quiz-end" type="submit">Home</button>
             </div>
 </div>
 </div>
