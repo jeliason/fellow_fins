@@ -15,8 +15,8 @@
         </div>
       </nav>
 </header>
-<main role="main" class="container mt-4 mb-3">
-<div class="container-fluid">
+<main role="main" class="container-fluid mt-4 mb-3">
+
     <div *ngIf="showFront" class="d-flex justify-content-center row m-1">
         <div *ngFor="let person of people" class="card bg-light m-3 col-lg-3 col-md-4 col-sm-6 col-xs-12">
             <img class="card-img-top" src="./assets/fins_pics/{{person.Picture_Local}}">
@@ -29,29 +29,11 @@
             </div>
         </div>
     </div>    
-</div>
-<div *ngIf="!showFront&&!quizEnd" class="row">
-    <div class="col-lg-6 vertical-center d-flex justify-content-center" id="profile_face">
-        <img src="./assets/fins_pics/{{correctFinPic}}"  class="img-fluid" style="height:500px;width:500px">
-    </div>
-    
-    <div class="col-lg-6 vertical-center d-flex justify-content-center" id="multiple_choice">
-        <div class="btn-group-vertical mt-3">
-            <button type="button" (click)="btnPressed(finArray[0])"class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    {{finArray[0]}}
-            </button>
-            <button type="button" (click)="btnPressed(finArray[1])" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    {{finArray[1]}}
-            </button>
-            <button type="button" (click)="btnPressed(finArray[2])" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    {{finArray[2]}}
-            </button>
-            <button type="button" (click)="btnPressed(finArray[3])" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    {{finArray[3]}}
-            </button>
-        </div>
-    </div>
-    
+
+<div *ngIf="!showFront&&!quizEnd" >
+    <app-quiz [correctFinPic]="correctFinPic" [finArray]="finArray"
+     [correctFinName]="correctFinName"
+     (success)="onSuccess()" (failure)="onFailure()"></app-quiz>
 </div>
 <div *ngIf="quizEnd">
 <div class="row">

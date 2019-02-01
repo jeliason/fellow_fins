@@ -1,25 +1,20 @@
-<div class="row">
-    <button (click)='selectRandomPerson()'>Select Person</button>
 
-    <div class="col-lg-6 vertical-center d-flex justify-content-center" id="profile_face">
-        <img src="./assets/fins_pics/{{person.Picture_Local}}"  class="img-fluid">
+<div class="row">
+    <div class="col-lg-6 vertical-center d-flex justify-content-center img-div" id="profile_face">
+        <img src="./assets/fins_pics/{{correctFinPic}}" class="img-fluid" style="width:500px;height:500px">
     </div>
-    
+
     <div class="col-lg-6 vertical-center d-flex justify-content-center" id="multiple_choice">
         <div class="btn-group-vertical mt-3">
-            <button type="button" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    {{person.Name}}
+
+            <button (click)="done(person)" *ngFor="let person of finArray" type="button" [ngClass]="{
+                'btn-success': !ocean && !danger,
+                'btn-danger':!ocean && danger,
+                'btn-ocean': ocean
+            }"class="btn btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
+                   {{person}}
             </button>
-            <button type="button" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    {{person.Name}}
-            </button>
-            <button type="button" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    {{person.Name}}                
-            </button>
-            <button type="button" class="btn btn-ocean btn-primary m-2" data-toggle="button" aria-pressed="false" autocomplete="off">
-                    {{person.Name}}                
-            </button>
+            
         </div>
     </div>
-    
 </div>

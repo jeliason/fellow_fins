@@ -1,23 +1,30 @@
-import { Component} from '@angular/core';
-import {PEOPLE} from './ff';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz_page.component.html',
   styleUrls: ['./quiz_page.component.css']
+  
 })
 export class QuizPageComponent{
-  title = 'ff-app';
-  people = PEOPLE;
+  @Input() correctFinPic:string;
+  @Input() finArray:Array<string>;
+  @Input() correctFinName:string;
+  @Output() success = new EventEmitter();
+  @Output() failure = new EventEmitter();
+  ocean=true;
+  danger=false;
 
-  getFin (){
-    var correctFinCode = Math.floor(Math.random() * 53);
-    console.log(correctFinCode);
-
-    var correctFinName = PEOPLE[correctFinCode].Name;
-    console.log(correctFinName);
-
-    var correctFinPic = PEOPLE[correctFinCode].Picture_Local;
-    console.log(correctFinName);
+  done(p: string){
+    if (p == this.correctFinName){
+      this.success.emit();
+      this.ocean=false;
+    }
+    else{
+      this.failure.emit()
+      this.ocean=false;
+      this.danger=true;
+    }
   }
+
 }
