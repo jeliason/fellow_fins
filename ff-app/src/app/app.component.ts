@@ -10,10 +10,14 @@ export class AppComponent{
   title = 'ff-app';
   people = PEOPLE;
   showFront = true;
-
+  quizEnd=false;
   counter = 0;
   score = 0;
-
+  correctFinCode;
+  correctFinName;
+  correctFinPic;
+  incorrectFinArray;
+  finArray=[];
   full_array=Array.from({length:this.people.length},(x,i)=>i);
   select_index = this.full_array;
 
@@ -22,19 +26,53 @@ export class AppComponent{
     this.score = 0;
     this.select_index = this.full_array;
     this.showFront=false;
+    this.quizEnd=false;
+    this.getFin();
   }
   hideQuiz(){
     this.showFront=true;
+    this.quizEnd=false;
   }
-<<<<<<< HEAD
+  getFin(){
+    this.correctFinCode = this.select_index[Math.floor(Math.random() * this.select_index.length)];
+    this.correctFinName = PEOPLE[this.correctFinCode].Name;
+    this.correctFinPic = PEOPLE[this.correctFinCode].Picture_Local;
+
+    this.incorrectFinArray = [];
+    while(this.incorrectFinArray.length < 3){
+        var incorrectFinCode = Math.floor(Math.random()*PEOPLE.length);
+        if (incorrectFinCode!=this.correctFinCode && !this.incorrectFinArray.includes(incorrectFinCode)) this.incorrectFinArray.push(PEOPLE[incorrectFinCode].Name);
+    }
   
-=======
-  getFin (){
-    var correctFinCode = Math.floor(Math.random() * 53);
+    this.incorrectFinArray.push(this.correctFinCode);
+    this.finArray = this.incorrectFinArray;
+    var randIdx= Math.floor(Math.random() * 4);
 
-    var correctFinName = PEOPLE[correctFinCode].Name;
+    this.finArray.splice(randIdx,0,this.correctFinName);
 
-    var correctFinPic = PEOPLE[correctFinCode].Picture_Local;
+    console.log(this.finArray[0]);
   }
->>>>>>> 162b7440de64f644560ae0f3439f2890c6cf45a6
+
+  btnPressed(fin){
+    let result = this.isCorrect(fin)
+    if(result) {
+      this.score+=1;
+      // change btn to green
+      // rest to red
+    } else{
+      // change btn to red
+      // right one to green
+      // rest to red
+    }
+
+    this.counter+=1;
+    if (this.counter===this.people.length){
+      this.quizEnd=true;
+    }else{
+      this.getFin();
+    }
+  }  
+  isCorrect(fin){
+    return fin === this.correctFinName; 
+  }
 }

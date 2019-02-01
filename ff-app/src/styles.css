@@ -13,7 +13,11 @@
 }
 .btn-ocean{
     background-color:#0067b8;
+}
 
+.btn-ocean:hover, .navbar-brand:hover{
+    background-color: #0067b8;
+    cursor: pointer;
 }
 
 #incorrectLabel {
