@@ -18,6 +18,7 @@ export class AppComponent {
   correctFinPic;
   incorrectFinArray;
   finArray = [];
+  numFins = this.people.length;
   full_array = Array.from({ length: this.people.length }, (x, i) => i);
   select_index = this.full_array;
 

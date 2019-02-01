@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
+import { NgbdProgressbarLabels } from './progessbar-labels';
 
 @Component({
   selector: 'app-quiz',
@@ -10,6 +11,8 @@ export class QuizPageComponent{
   @Input() correctFinPic:string;
   @Input() finArray:Array<string>;
   @Input() correctFinName:string;
+  @Input() counter:number;
+  @Input() numFins:number;
   @Output() success = new EventEmitter();
   @Output() failure = new EventEmitter();
   ocean=true;

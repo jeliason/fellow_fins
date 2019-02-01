@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { QuizPageComponent } from './quiz_page.component';
+import { NgbdProgressbarLabels } from './progessbar-labels';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuizPageComponent
+    QuizPageComponent,
+    NgbdProgressbarLabels
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

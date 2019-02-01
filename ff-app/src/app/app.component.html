@@ -32,7 +32,7 @@
 
 <div *ngIf="!showFront&&!quizEnd" >
     <app-quiz [correctFinPic]="correctFinPic" [finArray]="finArray"
-     [correctFinName]="correctFinName"
+     [correctFinName]="correctFinName" [counter]="counter" [numFins]="numFins"
      (success)="onSuccess()" (failure)="onFailure()"></app-quiz>
 </div>
 <div *ngIf="quizEnd">
